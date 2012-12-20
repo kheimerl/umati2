@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Umati Display</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="umati.css" />
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/bond.js"></script>
+        <script src="umati.js"></script>
+        <script src="display.js"></script>
+    </head>
+    <body>
+        <div id="message">Not Connected</div>
+        <div id="game">
+            <div class="players" id="leftPlayers"></div>
+            <div id="field">
+                <div id="leftField"></div>
+                    <div class="score" id="leftScore"></div>
+                <div id="rightField"></div>
+                    <div class="score" id="rightScore"></div>
+                <div id="ball"></div>
+                <div id="flash"></div>
+            </div>
+            <div class="players" id="rightPlayers"></div>
+        </div>
+        
+        <div id ="directions">
+			<h1>Connect To:</h1>
+			<p>127.0.0.1:/umati</p>
+			<h1>How to Use Your Phone As A Controller</h1>
+			<p> Hold your phone parallel to the ground. </p>
+			<p> Tilt your phone up and down to control the paddle. </p>
+		</div>
+    </body>
+</html>
