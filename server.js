@@ -62,11 +62,18 @@ io.sockets.on('connection', function (socket) {
         });
     });
     socket.on('move', function(data) {
-		//console.log("move:", data);
         socket.get('controllerID', function(err, controllerID){
             if (controllerID){
                 data.controllerID = controllerID;
                 if(display) display.emit('move', data);
+            }
+        });
+    });
+    socket.on('slide', function(data) {
+        socket.get('controllerID', function(err, controllerID){
+            if (controllerID){
+                data.controllerID = controllerID;
+                if(display) display.emit('slide', data);
             }
         });
     });

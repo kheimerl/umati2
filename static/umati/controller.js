@@ -1,7 +1,7 @@
 var socket;
 var name;
 $(document).ready(function(){
-    name = prompt("What is your name?", "anonymous");
+    name = Math.random().toString(36).substring(10);
 
     // start the socket.io connection and set up the handlers
     socket = io.connect('http://' + window.location.host);
@@ -18,6 +18,7 @@ $(document).ready(function(){
         }
     });
     initKey();
+    initSlider();
 });
 
 function keyHandler(event) {
@@ -42,5 +43,15 @@ function keyHandler(event) {
 
 function initKey()
 {
-	window.addEventListener('keydown', keyHandler, true);
+    window.addEventListener('keydown', keyHandler, true);
+}
+
+function sliderHandler(event, ui) {
+    console.log(ui.value);
+    socket.emit('slide', {value: ui.value});
+}
+
+function initSlider()
+{
+    $( "div#slider" ).on('slidechange', sliderHandler);
 }

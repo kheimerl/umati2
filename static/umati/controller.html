@@ -4,24 +4,26 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="umati.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <!--
     <link rel="stylesheet" href="/jquery-ui-1.9.2.css" />
     <script src="/jquery-1.7.1.min.js"></script>
-    <script src="/jquery-ui-1.9.2.js"></script>
+    <script src="/jquery-ui-1.9.2.js"></script> 
+    -->
     <script src="/socket.io/socket.io.js"></script>
     <script src="controller.js"></script>
     <script>
       $(function() {
-         $( "#slider" ).slider();
+         $( "#slider" ).slider({ orientation: "vertical", max: 4, min: 0 });
       });
     </script>
   </head>
   <body>
-    <div id="slider"></div>
-    <div id="message">Not Connected</div>
-    <div id="mobile-directions">
-      <h1>How to Use Your Phone As A Controller</h1>
-      <p> Hold your phone parallel to the ground. </p>
-      <p> Tilt your phone up and down to control the paddle. </p>
-    </div>
+    <center>
+      <div id="message">Not Connected</div>
+      <div id="slider"></div>
+    </center>
   </body>
 </html>

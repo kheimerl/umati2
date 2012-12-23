@@ -49,6 +49,12 @@ document.addEventListener("DOMContentLoaded", function(){
             players[data.controllerID].move(data);
         }
     });
+    socket.on('slide', function(data){
+        // ignore it if the message is from a controllerID that doesn't correspond to one of our players
+        if(players[data.controllerID]){
+	    console.log(players[data.controllerID].name + ":" + data.value);
+        }
+    });
     socket.on('pause', function(){
         game.pause();
     });
