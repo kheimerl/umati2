@@ -44,7 +44,3 @@ function initKey()
 {
 	window.addEventListener('keydown', keyHandler, true);
 }
-
-function blockMove() {
-	event.preventDefault();
-}
