@@ -53,6 +53,8 @@ document.addEventListener("DOMContentLoaded", function(){
         // ignore it if the message is from a controllerID that doesn't correspond to one of our players
         if(players[data.controllerID]){
 	    console.log(players[data.controllerID].name + ":" + data.value);
+        //CHRISTIE: set slider to equal incoming value
+        $('#slider').slider("value", data.value);
         }
     });
     socket.on('pause', function(){
