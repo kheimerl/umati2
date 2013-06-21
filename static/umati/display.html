@@ -7,9 +7,83 @@
         <script src="/bond.js"></script>
         <script src="umati.js"></script>
         <script src="display.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script>
+    //CHRISTIE to create all of the sliders
+    $(function() {$( "#slider1" ).slider({ orientation: "vertical", max: 4, min: 0 });});
+    $(function() {$( "#slider2" ).slider({ orientation: "vertical", max: 4, min: 0 });});
+    $(function() {$( "#slider3" ).slider({ orientation: "vertical", max: 4, min: 0 });});
+    $(function() {$( "#slider4" ).slider({ orientation: "vertical", max: 4, min: 0 });});
+    $(function() {$( "#slider5" ).slider({ orientation: "vertical", max: 4, min: 0 });});
+    $(function() {$( "#slider6" ).slider({ orientation: "vertical", max: 4, min: 0 });});
+    </script>
     </head>
     <body>
         <div id="message">Not Connected</div>
+        <font color = "white">
+        <div style="float: left; width: 150px;">
+            <center>
+                <div id="slider1"></div>
+                <br>
+                <div id="slider1message"></div>
+                <br>
+            </center>
+        </div>
+        <div style="float: left; width: 150px;">
+            <center>
+                <div id="slider2"></div>
+                <br>
+                <div id="slider2message"></div>
+                <br>
+            </center>
+        </div>
+        <div style="float: left; width: 150px;">
+            <center>
+                <div id="slider3"></div>
+                <br>
+                <div id="slider3message"></div>
+                <br>
+            </center>
+        </div>
+        <div style="float: left; width: 150px;">
+            <center>
+                <div id="slider4"></div>
+                <br>
+                <div id="slider4message"></div>
+                <br>
+            </center>
+        </div>
+        <div style="float: left; width: 150px;">
+            <center>
+                <div id="slider5"></div>
+                <br>
+                <div id="slider5message"></div>
+                <br>
+            </center>
+        </div>
+        <div style="float: left; width: 150px;">
+            <center>
+                <div id="slider6"></div>
+                <br>
+                <div id="slider6message"></div>
+                <br>
+            </center>
+        </div>
+        </font>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <div id="game">
             <div class="players" id="leftPlayers"></div>
             <div id="field">
@@ -31,28 +105,4 @@
 			<p> Tilt your phone up and down to control the paddle. </p>
 		</div>
     </body>
-</html>
-<html>
-  <head>
-    <title>Umati Controller</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" type="text/css" href="umati.css" />
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
-    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="display.js"></script>
-    <script>
-      $(function() {
-         $( "#slider" ).slider({ orientation: "vertical", max: 4, min: 0 });
-      });
-    </script>
-  </head>
-  <body>
-    <center>
-      <div id="message">Not Connected</div>
-      <div id="slider"></div>
-    </center>
-  </body>
 </html>
