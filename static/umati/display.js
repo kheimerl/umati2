@@ -43,7 +43,10 @@ document.addEventListener("DOMContentLoaded", function(){
         if(players[data.controllerID]){
             socket.emit('playerConnected', {controllerID: data.controllerID, title: game.title});
             //CHRISTIE add a slider for the player
-            if (slider1player == ''){
+            if(data.name == slider1player || data.name == slider2player || data.name == slider3player ||
+                data.name == slider4player || data.name == slider5player || data.name == slider6player){
+                //intentionally left blank to avoid duplicate sliders
+            }else if (slider1player == ''){
                 document.getElementById("slider1").style.visibility="visible";
                 slider1player = data.name;
                 $('div#slider1message').html(slider1player);
